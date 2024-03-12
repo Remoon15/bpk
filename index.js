@@ -25,16 +25,6 @@ rl.question(text, resolve)
   })
 };
 //=================================================//
-var low
-try {
-low = require('lowdb')
-} catch (e) {
-low = require('./lib/lowdb')}
-//=================================================//
-const { Low, JSONFile } = low
-const mongoDB = require('./lib/mongoDB')
-//=================================================//
-//=================================================//
 const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
 //=================================================//
 global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
